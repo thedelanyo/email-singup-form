@@ -1,0 +1,82 @@
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: var(--normal);
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* "A" elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: var(--blue);
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+a {
+  cursor: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove all animations and transitions for people that prefer not to use them */
+@media (prefer-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 40em) {
+  a {
+    cursor: pointer;
+  }
+}

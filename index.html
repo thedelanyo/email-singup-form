@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <title>Email Signup Form</title>
+  </head>
+  <body>
+    <main class="signup flow">
+      <h1 class="signup__heading">Signup for the latest updates</h1>
+      <form id="form" class="signup__form flow">
+        <label for="email">Email Address</label>
+        <div class="inline-field-control">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocapitalize="none"
+            autocorrect="off"
+            required
+            pattern="[^@]+@[^\.]+\..+"
+          />
+          <button class="button">
+            <span class="v-hidden">Submit email</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M11.293 5.707L16.586 11H5a1 1 0 000 2h11.586l-5.293 5.293a.999.999 0 101.414 1.414l7-7a1.006 1.006 0 000-1.414l-7-7a.999.999 0 10-1.414 1.414z"
+              />
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <div aria-atomic="true" role="alert" class="signup__alert"></div>
+
+      <form id="formFile">
+        <label for="file">upload file</label>
+        <input type="file" name="file" id="file" accept="image/*" />
+        <button class="button">upload</button>
+      </form>
+
+      <img id="oldImg" />
+      <img id="newImg" />
+      <script type="module" src="/js/file.js" async defer></script>
+    </main>
+  </body>
+</html>
